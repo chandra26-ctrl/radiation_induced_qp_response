@@ -34,11 +34,11 @@ SCRIPT_DIRECTORY = Path(__file__).resolve().parent
 
 # Input CSV/TXT file produced by ChargeElectrodeSensitivity.  Use a combined
 # worker file here if the simulation was multithreaded.
-INPUT_FILE = SCRIPT_DIRECTORY.parent / "results" / "qp_creation_noCu_best.txt"
+INPUT_FILE = SCRIPT_DIRECTORY.parent / "qp_creation.txt"
 
 # Written by ChargeRunAction.  With SIMULATED_EH_PAIRS=None, the analysis
 # requires this manifest to certify that the requested run completed.
-RUN_SUMMARY_FILE = SCRIPT_DIRECTORY.parent / "results" / "run_summary_qp_creation_noCu_best.txt"
+RUN_SUMMARY_FILE = SCRIPT_DIRECTORY.parent / "run_summary_qp_creation.txt"
 
 # Select the aluminum patches by their center positions.  Figure 8 uses a
 # near patch at (400, 200) um (solid line) and a far patch at (3800, 200) um

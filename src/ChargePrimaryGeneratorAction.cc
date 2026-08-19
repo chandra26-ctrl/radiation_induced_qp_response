@@ -42,12 +42,15 @@ void ChargePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent) {
     const G4double totalKineticEnergy = particleGun->GetParticleEnergy(); // Save user-specified energy
     // Keep either carrier from being initialized at exactly zero energy.  The
     // clamp affects at most one micro-eV at either end of the uniform split.
-    const G4double minimumCarrierEnergy = 1e-6*eV;
-    const G4double splitMinimum =
-        std::min(minimumCarrierEnergy, totalKineticEnergy/2.);
-    const G4double electronEnergy = splitMinimum + G4UniformRand() *
-        (totalKineticEnergy - 2.*splitMinimum);
-    const G4double holeEnergy = totalKineticEnergy - electronEnergy;
+    // const G4double minimumCarrierEnergy = 1e-6*eV;
+    // const G4double splitMinimum =
+    //     std::min(minimumCarrierEnergy, totalKineticEnergy/2.);
+    // const G4double electronEnergy = splitMinimum + G4UniformRand() *
+    //     (totalKineticEnergy - 2.*splitMinimum);
+    // const G4double holeEnergy = totalKineticEnergy - electronEnergy;
+
+    const G4double electronEnergy = totalKineticEnergy/2.;
+    const G4double holeEnergy = totalKineticEnergy/2.;
 
     particleGun->SetParticleDefinition(G4CMPDriftHole::Definition());
     particleGun->SetParticleEnergy(holeEnergy);
