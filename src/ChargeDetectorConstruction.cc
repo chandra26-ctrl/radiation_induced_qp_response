@@ -419,7 +419,7 @@ void ChargeDetectorConstruction::SetupGeometry()
 
   // Figure 8 backside: bare Si (lossless) perforated by 10-um Cu islands.
   // Must run after botSurfProp (above) is defined.
-  ConstructBacksideCopper(worldLogical, siliconPhysical);
+  //ConstructBacksideCopper(worldLogical, siliconPhysical);
 
     for (G4int ix = -19; ix <= 19; ++ix) {
     for (G4int iy = -19; iy <= 19; ++iy) {

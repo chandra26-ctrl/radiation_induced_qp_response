@@ -56,12 +56,6 @@ target_link_libraries(g4cmpCharge PRIVATE
   ${Geant4_LIBRARIES}
 )
 
-# Make the run macros available directly from the build directory.
-set(CASCADE_MACROS
-  phonon_caustics.mac
-  vis_eh.mac
-)
-
 foreach(macro IN LISTS CASCADE_MACROS)
   configure_file(
     ${CMAKE_CURRENT_SOURCE_DIR}/${macro}
