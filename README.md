@@ -76,4 +76,4 @@ During the planning of the simulation, an idea was talked about if evenly splitt
 
 ## Interpretation and limitations
 
-- During the simulation, some of the phonons managed to escape the silicon substrate, but this happened once every a lot of events, where each events spawned a lot of phonons. This made identifying how the phonons escaped the substrate difficult. However, since it happened so rarely, it is not expected to have a significant effect on the overall results of the simulation.
+- During the simulation, a small number of phonons were observed escaping the silicon substrate. These occurrences were extremely rare, with only an occasional escape across many events, each of which generated a large number of phonons. Due to the low frequency of these occurrences, determining the exact mechanism by which the phonons escaped was difficult. However, the number of escaped phonons is negligible compared with the total number generated and is therefore not expected to significantly affect the overall simulation results.
