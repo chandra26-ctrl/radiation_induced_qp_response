@@ -1,0 +1,25 @@
+/g4cmp/producePhonons 1
+/g4cmp/sampleLuke 1
+
+# Mean-free path trapping
+/g4cmp/eTrappingMFP 300 um
+/g4cmp/hTrappingMFP 300 um
+
+/run/numberOfThreads 20
+/g4cmp/HitsFile qp_creation.txt
+/g4cmp/phononBounces 1000
+/g4cmp/minEPhonons 0.000382 eV
+/g4cmp/recordMinETracks false
+/g4cmp/clearance 0.001 nm
+/run/initialize
+
+/gun/number 1
+/gun/position 0 0 0.126 mm
+#/gun/direction 0 0 1
+/gun/energy 2.43 eV
+
+#/process/inactivate phononScattering
+#/process/inactivate phononDownconversion
+
+/run/printProgress 1
+/run/beamOn 27777

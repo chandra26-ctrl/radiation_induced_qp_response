@@ -1,0 +1,35 @@
+/g4cmp/producePhonons 0
+/g4cmp/sampleLuke 0
+
+# Mean-free path trapping
+/g4cmp/eTrappingMFP 300 um
+/g4cmp/hTrappingMFP 300 um
+
+/g4cmp/HitsFile phonon_hits.txt
+/run/initialize
+
+/gun/number 1
+/gun/position 0 0 0.262 mm
+#/gun/direction 0 0 1
+#/gun/ang/type/iso
+#/gps/ang/mintheta 90 deg
+#/gps/ang/maxtheta 180 deg
+/gun/energy 2.43 eV
+
+
+/vis/open OGL
+/vis/drawVolume
+
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/set G4CMPDriftElectron blue
+/vis/modeling/trajectories/drawByParticleID-0/set G4CMPDriftHole red
+/vis/modeling/trajectories/drawByParticleID-0/set phononL green
+/vis/modeling/trajectories/drawByParticleID-0/set phononTF green
+/vis/modeling/trajectories/drawByParticleID-0/set phononTS green
+/vis/scene/add/trajectories smooth
+/vis/scene/endOfEventAction accumulate
+
+/process/inactivate phononScattering
+/process/inactivate phononDownconversion
+
+#/run/beamOn 1

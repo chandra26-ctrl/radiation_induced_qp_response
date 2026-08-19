@@ -1,0 +1,68 @@
+# CMake build and install trees
+/build/
+/build-*/
+/cmake-build-*/
+/install/
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/install_manifest.txt
+/CTestTestfile.cmake
+/compile_commands.json
+/Makefile
+
+# Compiled objects, libraries, and in-source executables
+*.o
+*.obj
+*.d
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+/g4cmpCharge
+/g4cmpIonize
+/libg4cmpCharge.*
+
+# Generated G4CMP simulation data
+/charge_hits*.txt
+/phonon_hits*.txt
+/epos_*.txt
+/epositions.txt
+/LukePhononEnergies*
+/kaplanqp_stats*
+
+# Geant4 random-engine state
+/*.rndm
+/*.rndm[0-9]*
+
+# Generated analysis and visualization output
+/Charge_Drift_Speed_*.png
+/*.eps
+/g4*.prim
+/g4*.wrl
+/.DAWN_*
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Editor and operating-system files
+.DS_Store
+*~
+\#*\#
+.#*
+*.swp
+*.swo
+*.swn
+/.vscode/
+/.idea/
+
+# Local Codex/agent workspace metadata
+/.agents/
+/.codex/
+
+# Logs
+*.log
