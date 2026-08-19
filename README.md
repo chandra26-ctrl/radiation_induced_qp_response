@@ -27,7 +27,7 @@ The code contains an option to enable backside-copper construction for comparing
 
 <table>
     <tr>
-        <td><img src="images/noCu_chip.png" width="400" height="200"></td>
+        <td><img src="images/noCu_chip.png" width="400" height="300"></td>
         <td><img src="images/cu_chip.png" width="400"></td>
     </tr>
 </table>
